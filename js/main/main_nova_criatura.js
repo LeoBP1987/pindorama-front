@@ -140,7 +140,7 @@ async function imprimiEtiqueta(etiqueta, estado) {
     }
 
     const imgFechar = document.createElement("img");
-    imgFechar.src = "/assets/fechar.svg";
+    imgFechar.src = "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/fechar.svg";
     imgFechar.classList.add("lista_etiquetas_fechar");
     imgFechar.addEventListener("click", async () => {
       if (etiquetaNova.dataset.context === "ativo") {
@@ -190,7 +190,7 @@ async function preparaEdicao(criatura_id) {
   descricaoCriatura.value = criatura.descricao;
   fotoImg.src = criatura.foto_perfil
     ? criatura.foto_perfil
-    : "/assets/criatura_sem_imagem.jpg";
+    : "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/criatura_sem_imagem.jpg";
   fotoImg.alt = `Imagem da criatura ${criatura.criatura}`;
   selectTipo.value = criatura.tipo;
   selectForma.value = criatura.forma;
@@ -207,13 +207,13 @@ function preparaAdicao() {
   botaoPublicar.textContent = "Publicar";
   botaoApagar.classList.add("invisivel");
   formularioCriatura.reset();
-  fotoImg.src = "/assets/sem_imagem.jpg";
+  fotoImg.src = "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/sem_imagem.jpg";
   fotoImg.alt = "Imagem Padrão para adição de criatura";
   fotoNome.textContent = "foto_perfil.png";
 
   botaoDescartar.addEventListener("click", () => {
     listaEtiquetas.innerHTML = "";
-    fotoImg.src = "/assets/sem_imagem.jpg";
+    fotoImg.src = "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/sem_imagem.jpg";
     fotoImg.alt = "Imagem Padrão para adição de criatura";
     fotoNome.textContent = "foto_perfil.png";
   });

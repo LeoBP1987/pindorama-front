@@ -50,7 +50,7 @@ const ui = {
       if (criatura.foto_perfil) {
         imgCriatura.src = `${criatura.foto_perfil}`;
       } else {
-        imgCriatura.src = "/assets/criatura_sem_imagem.jpg";
+        imgCriatura.src = "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/sem_imagem.jpg";
       }
 
       imgCriatura.alt = `Imagem da criatura ${criatura.criatura}`;
@@ -171,7 +171,7 @@ const ui = {
       elementos.titulo.textContent = criatura.criatura;
       elementos.img.src = criatura.foto_perfil
         ? criatura.foto_perfil
-        : "/assets/criatura_sem_imagem.jpg";
+        : "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/sem_imagem.jpg";
       elementos.img.alt = criatura.foto_perfil
         ? `Imagem da criatura ${criatura.criatura}`
         : "Image padrão para criaturas sem imagem";
@@ -497,7 +497,7 @@ const ui = {
 
           const imgFoto = document.createElement("img");
           imgFoto.classList.add("main_criatura_foto_img_album");
-          imgFoto.src = "/assets/album_sem_imagem.jpg";
+          imgFoto.src = "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/sem_imagem.jpg";
           imgFoto.alt = "Imagem que indica falta de fotos no Album";
 
           divFoto.appendChild(imgFoto);
@@ -647,7 +647,7 @@ const ui = {
         elementos_elementos.tipoModal.value = elemento.tipo;
         ui.elementos.elementos.imgModal.src = elemento.foto_elemento
           ? elemento.foto_elemento
-          : "/assets/criatura_sem_imagem.jpg";
+          : "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/sem_imagem.jpg";
         elementos_elementos.imgModal.alt = `Imagem do elemento ${elemento.elemento}`;
         elementos_elementos.modalEdit.setAttribute("data-id", elemento.id);
         elementos_elementos.modalEdit.style.display = "flex";
@@ -657,7 +657,7 @@ const ui = {
       imgElemento.classList.add("main_lista_item_img_elementares");
       imgElemento.src = elemento.foto_elemento
         ? elemento.foto_elemento
-        : "/assets/criatura_sem_imagem.jpg";
+        : "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/sem_imagem.jpg";
       imgElemento.alt = `Imagem do elemento ${elemento.elemento}`;
 
       const divInfoElemento = document.createElement("div");
