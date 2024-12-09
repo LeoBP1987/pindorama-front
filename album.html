@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pindorama</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1 class="cabecalho_titulo">PINDORAMA</h1>
+      <p class="cabecalho_subtitulo">a terra das soluções adiadas</p>
+    </header>
+    <section class="menu">
+      <ul class="menu_lista">
+        <li class="menu_lista_item">
+          <a href="criatura.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Criatura</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="album.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto ativo">Album</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="lendas.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Lendas e estorias</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="index.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Voltar</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <main class="main">
+      <div class="main_cabecalho">
+        <h2 class="main_cabecalho_titulo" id="titulo-album"></h2>
+        <img
+          class="main_cabecalho_adicionar"
+          id="add-nova-foto"
+          src="/assets/adicionar.png"
+          alt="Icone de Adicionar"
+        />
+      </div>
+      <div class="main_album">
+        <div class="main_album_slides" id="main-album-slides">
+          <div class="slide-prev" id="prev">
+            <img src="/assets/prev.png" class="prev" alt="Icone seta prev" />
+          </div>
+          <div class="main_criatura slider">
+            <div class="slides" id="lista-album"></div>
+          </div>
+          <div class="slide-next" id="next">
+            <img src="/assets/next.png" class="next" alt="Icone seta next" />
+          </div>
+        </div>
+        <div class="main_album_add_foto invisivel" id="main-album-add-foto">
+          <div class="main_formulario_foto">
+            <div class="main_formulario_foto_previ">
+              <img
+                class="main_formulario_foto_previ_img"
+                id="previ-img"
+                src="assets/sem_imagem.jpg"
+                alt="Imagem que representa a ausência de imagem"
+              />
+            </div>
+            <button class="main_formulario_foto_botao" id="foto-botao">
+              Carregar Foto
+            </button>
+            <input
+              type="file"
+              id="carregar-foto-campo"
+              accept="image/"
+              style="display: none"
+            />
+            <div class="main_formulario_foto_nome">
+              <p
+                class="main_formulario_foto_nome_etiqueta"
+                id="nome-foto-previ"
+              >
+                foto_perfil.png
+              </p>
+              <img src="/assets/fechar.svg" alt="Imagem de Fechar Clara" />
+            </div>
+            <div class="main_album_add_foto_fonte" id="fotoFonte">
+              <label class="main_album_add_foto_fonte_label" for="albumFonte"
+                >Fonte:</label
+              >
+              <input
+                class="main_album_add_foto_fonte_input"
+                type="text"
+                id="album-fonte"
+                name="albumFonte"
+              />
+            </div>
+            <div class="main_formulario_botoes">
+              <button
+                class="main_formulario_botoes_botao botao_descartar"
+                id="foto-descartar"
+              >
+                Descartar
+              </button>
+              <button
+                class="main_formulario_botoes_botao botao_publicar"
+                id="foto-publicar"
+              >
+                Publicar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="modal_foto" id="modal-edit">
+      <div class="modal_foto_formulario">
+        <img
+          class="modal_foto_foto"
+          src="./media/anhanga.jpg"
+          alt="Foto Anhanga"
+          id="img-foto-modal"
+        />
+        <div class="modal_foto_info">
+          <div class="formulario_modal_foto_div">
+            <label
+              class="formulario_modal_foto_label"
+              for="modal_fonte"
+              readonly
+              >Fonte</label
+            >
+            <input
+              class="formulario_modal_foto_input_fonte"
+              type="text"
+              id="fonte-foto-modal"
+              name="modal_fonte"
+              readonly
+            />
+          </div>
+          <div class="main_modal_botoes">
+            <button
+              class="main_modal_botoes_botao botao_apagar_foto"
+              id="btn-apagar-modal"
+            >
+              Apagar
+            </button>
+            <button
+              class="main_modal_botoes_botao botao_publicar"
+              id="btn-voltar-modal"
+            >
+              Voltar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal_carregando" id="carregando">
+      <div class="div_carrega">
+        <h2 class="main_cabecalho_titulo_modal" id="titulo-modal">
+          Carregando...
+        </h2>
+        <div id="carregando-barra"></div>
+      </div>
+    </div>
+
+    <footer class="rodape">
+      <h2 class="rodape_texto">Desenvolvido por Leonardo Pereira</h2>
+    </footer>
+    <script src="/js/main/main_album.js" type="module"></script>
+    <script
+      src="/js/funcoes/carrega_previsualizacao_imagem.js"
+      type="module"
+    ></script>
+  </body>
+</html>

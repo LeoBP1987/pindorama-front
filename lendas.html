@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pindorama</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1 class="cabecalho_titulo">PINDORAMA</h1>
+      <p class="cabecalho_subtitulo">a terra das soluções adiadas</p>
+    </header>
+    <section class="menu">
+      <ul class="menu_lista">
+        <li class="menu_lista_item">
+          <a href="index.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Criatura</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="album.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Album</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="lendas.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto ativo">Lendas e estorias</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="index.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Voltar</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <main class="main">
+      <div class="main_cabecalho">
+        <h2 class="main_cabecalho_titulo" id="titulo-lendas"></h2>
+        <img
+          class="main_cabecalho_adicionar"
+          id="adicionar-lenda"
+          src="/assets/adicionar.png"
+          alt="Icone de Adicionar"
+        />
+      </div>
+      <div class="main_lendas">
+        <ul class="main_lendas_lista" id="lista-lendas"></ul>
+        <div class="main_lendas_add invisivel" id="add-lendas">
+          <form action="" class="formulario_lendas" id="form-lendas">
+            <input type="hidden" id="lenda-id" />
+            <div class="formulario_lendas_div" id="nomeLenda">
+              <label class="formulario_lendas_label" for="lenda_nome"
+                >Título</label
+              >
+              <input
+                class="formulario_lendas_input"
+                type="text"
+                id="lenda-nome"
+                name="lenda_nome"
+              />
+            </div>
+            <div class="formulario_lendas_div" id="descricaoLenda">
+              <label class="formulario_lendas_label" for="lenda_descricao"
+                >Lenda</label
+              >
+              <textarea
+                class="formulario_lendas_textarea"
+                name="lenda_descricao"
+                id="lenda-descricao"
+              ></textarea>
+            </div>
+            <div class="formulario_lendas_div" id="fonteLenda">
+              <label class="formulario_lendas_label" for="fonte_nome"
+                >Fonte</label
+              >
+              <input
+                class="formulario_lendas_input"
+                type="text"
+                id="fonte-nome"
+                name="fonte_nome"
+              />
+            </div>
+            <div class="main_formulario_botoes">
+              <button
+                class="main_formulario_botoes_botao botao_descartar"
+                type="reset"
+                id="btn-descartar"
+              >
+                Descartar
+              </button>
+              <button
+                class="main_formulario_botoes_botao botao_publicar"
+                id="btn-publicar"
+              >
+                Publicar
+              </button>
+            </div>
+          </form>
+          <button class="botao_apagar invisivel" id="botao-apagar">
+            Apagar
+          </button>
+        </div>
+      </div>
+    </main>
+    <div class="modal_exibe" id="modal-edit">
+      <div class="modal_exibe_div" id="modal-exibe-div">
+        <h2 class="main_cabecalho_titulo_modal" id="titulo-modal"></h2>
+        <div class="formulario_modal_div">
+          <label class="formulario_modal_label" for="modal_descricao"
+            >Conteúdo</label
+          >
+          <textarea
+            class="formulario_modal_textarea"
+            name="modal_descricao"
+            id="conteudo-modal"
+            readonly
+          ></textarea>
+        </div>
+        <div class="formulario_modal_div">
+          <label class="formulario_modal_label" for="modal_fonte">Fonte</label>
+          <input
+            class="formulario_modal_input"
+            type="text"
+            id="fonte-modal"
+            name="modal_fonte"
+            readonly
+          />
+        </div>
+        <div class="main_modal_botoes">
+          <button
+            class="main_modal_botoes_botao botao_descartar"
+            id="btn-fechar-modal"
+          >
+            Fechar
+          </button>
+          <button
+            class="main_modal_botoes_botao botao_publicar"
+            id="btn-editar-modal"
+          >
+            Editar
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal_carregando" id="carregando">
+      <div class="div_carrega">
+        <h2 class="main_cabecalho_titulo_modal" id="titulo-modal">
+          Carregando...
+        </h2>
+        <div id="carregando-barra"></div>
+      </div>
+    </div>
+
+    <footer class="rodape">
+      <h2 class="rodape_texto">Desenvolvido por Leonardo Pereira</h2>
+    </footer>
+    <script src="/js/main/main_lendas.js" type="module"></script>
+  </body>
+</html>

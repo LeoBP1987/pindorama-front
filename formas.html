@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pindorama</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1 class="cabecalho_titulo">PINDORAMA</h1>
+      <p class="cabecalho_subtitulo">a terra das soluções adiadas</p>
+    </header>
+    <section class="menu">
+      <ul class="menu_lista">
+        <li class="menu_lista_item">
+          <a href="index.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Criaturas</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="tipos.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Tipos</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="formas.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto ativo">Formas</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="origens.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Origens</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="elementares.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Elementos</p>
+          </a>
+        </li>
+        <!-- <li class="menu_lista_item">
+                <a href="entrar.html" class="menu_lista_item_link">
+                    <p class="menu_lista_item_texto">Sair</p>
+                </a>                
+            </li> -->
+      </ul>
+    </section>
+    <main class="main">
+      <div class="main_cabecalho">
+        <h2 class="main_cabecalho_titulo">Formas</h2>
+      </div>
+      <div class="main_formas">
+        <ul class="main_formas_lista" id="main-formas"></ul>
+        <div class="main_formas_formulario">
+          <form action="" class="formulario_formas" id="form-formas">
+            <input type="hidden" id="forma-id" />
+            <div class="formulario_formas_div" id="nomeFormas">
+              <label class="formulario_formas_label" for="forma_nome"
+                >Nome da Forma</label
+              >
+              <input
+                class="formulario_formas_input"
+                type="text"
+                id="forma-nome"
+                name="forma_nome"
+              />
+            </div>
+            <div class="formulario_formas_div" id="descricaoFormas">
+              <label class="formulario_formas_label" for="forma_descricao"
+                >Descrição</label
+              >
+              <textarea
+                class="formulario_formas_textarea"
+                name="forma_descricao"
+                id="forma-descricao"
+              ></textarea>
+            </div>
+            <div class="main_formas_botoes">
+              <button
+                class="main_formas_botoes_botao botao_descartar"
+                type="reset"
+                id="btn-descartar"
+              >
+                Descartar
+              </button>
+              <button
+                class="main_formas_botoes_botao botao_publicar"
+                type="submit"
+                id="btn-publicar"
+              >
+                Publicar
+              </button>
+            </div>
+          </form>
+          <button class="botao_apagar invisivel" id="botao-apagar">
+            Apagar
+          </button>
+        </div>
+      </div>
+    </main>
+    <div class="modal_edit" id="modal-edit">
+      <div class="formulario_modal" id="formulario-modal">
+        <h2 class="main_cabecalho_titulo_modal" id="titulo-modal"></h2>
+        <div class="formulario_modal_div">
+          <label class="formulario_modal_label" for="modal_nome"
+            >Nome da Forma</label
+          >
+          <input
+            class="formulario_modal_input"
+            type="text"
+            id="modal-nome"
+            name="modal_nome"
+            readonly
+          />
+        </div>
+        <div class="formulario_modal_div">
+          <label class="formulario_modal_label" for="modal_descricao"
+            >Descrição</label
+          >
+          <textarea
+            class="formulario_modal_textarea"
+            name="modal_descricao"
+            id="modal-descricao"
+            readonly
+          ></textarea>
+        </div>
+        <div class="main_modal_botoes">
+          <button
+            class="main_modal_botoes_botao botao_descartar"
+            id="btn-fechar-modal"
+          >
+            Fechar
+          </button>
+          <button
+            class="main_modal_botoes_botao botao_publicar"
+            id="btn-edit-modal"
+          >
+            Editar
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal_carregando" id="carregando">
+      <div class="div_carrega">
+        <h2 class="main_cabecalho_titulo_modal" id="titulo-modal">
+          Carregando...
+        </h2>
+        <div id="carregando-barra"></div>
+      </div>
+    </div>
+
+    <footer class="rodape">
+      <h2 class="rodape_texto">Desenvolvido por Leonardo Pereira</h2>
+    </footer>
+    <script src="/js/main/main_formas.js" type="module"></script>
+  </body>
+</html>

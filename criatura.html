@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pindorama</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1 class="cabecalho_titulo">PINDORAMA</h1>
+      <p class="cabecalho_subtitulo">a terra das soluções adiadas</p>
+    </header>
+    <section class="menu">
+      <ul class="menu_lista">
+        <li class="menu_lista_item">
+          <a href="criatura.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto ativo">Criatura</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="album.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Album</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="lendas.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Lendas e estorias</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="index.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Voltar</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <main class="main">
+      <div class="main_cabecalho">
+        <h2 class="main_cabecalho_titulo" id="titulo-criatura"></h2>
+      </div>
+      <div class="main_criatura">
+        <div class="main_criatura_foto">
+          <img
+            class="main_criatura_foto_img"
+            src=""
+            alt=""
+            id="foto-perfil-criatura"
+          />
+        </div>
+        <div class="main_criatura_conteudo">
+          <div class="main_criatura_conteudo_campos">
+            <div class="conteudo_campos_campo" id="criaturaNome">
+              <p class="conteudo_campos_campo_label">Nome da Criatura</p>
+              <p
+                class="conteudo_campos_campo_input"
+                id="conteudo-nome-criatura"
+              ></p>
+            </div>
+            <div class="conteudo_campos_campo" id="criaturaTipo">
+              <p class="conteudo_campos_campo_label">Tipo</p>
+              <p
+                class="conteudo_campos_campo_select"
+                id="conteudo-tipo-criatura"
+              ></p>
+            </div>
+            <div class="conteudo_campos_campo" id="criaturaForma">
+              <p class="conteudo_campos_campo_label">Forma</p>
+              <p
+                class="conteudo_campos_campo_select"
+                id="conteudo-forma-criatura"
+              ></p>
+            </div>
+            <div class="conteudo_campos_campo" id="criaturaOrigem">
+              <p class="conteudo_campos_campo_label">Origem</p>
+              <p
+                class="conteudo_campos_campo_select"
+                id="conteudo-origem-criatura"
+              ></p>
+            </div>
+            <div class="conteudo_campos_campo" id="criaturaModo">
+              <p class="conteudo_campos_campo_label">Modo</p>
+              <p
+                class="conteudo_campos_campo_select"
+                id="conteudo-modo-criatura"
+              ></p>
+            </div>
+            <div class="conteudo_campos_campo" id="criaturaDescricao">
+              <p class="conteudo_campos_campo_label">Descrição</p>
+              <p
+                class="conteudo_campos_campo_textarea"
+                id="conteudo-descricao-criatura"
+              ></p>
+            </div>
+            <div class="conteudo_campos_campo" id="criaturaEtiqueta">
+              <p class="conteudo_campos_campo_label">Etiquetas</p>
+              <ul
+                class="conteudo_campos_campo_lista_etiquetas"
+                id="lista-etiquetas"
+              ></ul>
+            </div>
+          </div>
+          <div class="conteudo_campos_botoes">
+            <a
+              href="nova_criatura.html"
+              class="criatura_botao_link"
+              id="botao-criatura-editar"
+              ><button
+                class="conteudo_campos_botoes_botao_criatura botao_publicar"
+                href="nova_criatura.html"
+              >
+                Editar
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="modal_carregando" id="carregando">
+      <div class="div_carrega">
+        <h2 class="main_cabecalho_titulo_modal" id="titulo-modal">
+          Carregando...
+        </h2>
+        <div id="carregando-barra"></div>
+      </div>
+    </div>
+
+    <footer class="rodape">
+      <h2 class="rodape_texto">Desenvolvido por Leonardo Pereira</h2>
+    </footer>
+    <script src="/js/main/main_criatura.js" type="module"></script>
+  </body>
+</html>

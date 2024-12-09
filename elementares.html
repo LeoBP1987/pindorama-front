@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pindorama</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho_titulo">PINDORAMA</h1>
+        <p class="cabecalho_subtitulo">a terra das soluções adiadas</p>
+    </header>
+    <section class="menu">
+        <ul class="menu_lista">
+            <li class="menu_lista_item">
+                <a href="index.html" class="menu_lista_item_link">
+                    <p class="menu_lista_item_texto">Criaturas</p>
+                </a>                                
+            </li>
+            <li class="menu_lista_item">
+                <a href="tipos.html" class="menu_lista_item_link">
+                    <p class="menu_lista_item_texto">Tipos</p>
+                </a>                
+            </li>
+            <li class="menu_lista_item">
+                <a href="formas.html" class="menu_lista_item_link">
+                    <p class="menu_lista_item_texto">Formas</p>
+                </a>                
+            </li>
+            <li class="menu_lista_item">
+                <a href="origens.html" class="menu_lista_item_link">
+                    <p class="menu_lista_item_texto">Origens</p>
+                </a>                
+            </li>
+            <li class="menu_lista_item">
+                <a href="elementares.html" class="menu_lista_item_link">
+                    <p class="menu_lista_item_texto ativo">Elementares</p>
+                </a>                
+            </li>
+            <!-- <li class="menu_lista_item">
+                <a href="entrar.html" class="menu_lista_item_link">
+                    <p class="menu_lista_item_texto">Sair</p>
+                </a>                
+            </li> -->
+        </ul>
+    </section>
+    <main class="main">
+        <div class="main_cabecalho">
+            <h2 class="main_cabecalho_titulo">Elementares</h2>
+            <a href="#" class="main_cabecalho_link">
+                <img class="main_cabecalho_adicionar" id="add_novo_elemento" src="/assets/adicionar.png" alt="Icone de Adicionar">
+            </a>
+        </div>
+        <ul class="main_lista_elementares" id="lista-elementos"></ul>
+        <div class="main_formulario invisivel" id="main-formulario-elementos">
+            <div class="main_formulario_foto">
+                <div class="main_formulario_foto_previ">
+                    <img class="main_formulario_foto_previ_img" id="previ-img" src="assets/sem_imagem.jpg" alt="Imagem que representa a ausência de imagem">
+                </div>
+                <button class="main_formulario_foto_botao" id="foto-botao">Carregar Foto</button>
+                <input type="file" id="carregar-foto-campo" accept="image/" style="display: none;" />
+                <div class="main_formulario_foto_nome">
+                    <p class="main_formulario_foto_nome_etiqueta" id="previ-nome">foto_perfil.png</p>
+                    <img src="/assets/fechar.svg" alt="Imagem de Fechar Clara">
+                </div>
+            </div>
+            <form action="" class="formulario_elementos" id="form-elementos">
+                <input type="hidden" id="elemento-id" />
+                <div class="formulario_elementos_div" id="nomeElementos">
+                    <label class="formulario_elementos_label" for="elemento_nome">Nome do Elemento</label>
+                    <input class="formulario_elementos_input" type="text" id="elemento-nome" name="elemento_nome" />
+                </div>
+                <div class="formulario_elementos_div" id="tipoElementos">
+                    <label class="formulario_elementos_label" for="elemento-tipo">Tipo do Elemento</label>
+                    <input class="formulario_elementos_input" type="text" id="elemento-tipo" name="elemento-tipo" />
+                </div>
+                <div class="formulario_elementos_div" id="descricaoElementos">
+                    <label class="formulario_elementos_label" for="elemento-descricao">Descrição</label>
+                    <textarea class="formulario_elementos_textarea" name="elemento-descricao" id="elemento-descricao"></textarea>
+                </div>
+                <div class="main_elementos_botoes">
+                    <button class="main_elementos_botoes_botao botao_descartar" type="reset" id="btn-descartar">Descartar</button>
+                    <button class="main_elementos_botoes_botao botao_publicar" id="btn-publicar">Publicar</button>
+                </div>
+                <button class="botao_apagar invisivel" id="botao-apagar">Apagar</button>
+            </form>
+        </div>
+    </div>
+    </main>
+    <div class="modal_elemento" id="modal-edit">
+        <div class="modal_elemento_formulario">
+            <h2 class="main_cabecalho_titulo_modal" id="titulo-modal"></h2>
+            <div class="modal_elemento_info">
+                <img class="modal_elemento_foto_elemento" src="" alt="" id="img-modal">
+                <div class="modal_elemento_info_info">
+                    <div class="formulario_modal_div">
+                        <label class="formulario_modal_label" for="modal_nome">Nome do Elemento</label>
+                        <input class="formulario_modal_input" type="text" id="modal-nome" name="modal_nome" readonly />
+                    </div>
+                    <div class="formulario_modal_div">
+                        <label class="formulario_modal_label" for="modal_tipo">Tipo do Elemento</label>
+                        <input class="formulario_modal_input" type="text" id="modal-tipo" name="modal_tipo" readonly />
+                    </div>
+                    <div class="formulario_modal_div">
+                        <label class="formulario_modal_label" for="modal_descricao">Descrição</label>
+                        <textarea class="formulario_modal_textarea" name="modal_descricao" id="modal-descricao" readonly>O Muiraquitã é frequentemente esculpido em pedra, madeira ou outro material natural, e encontra-se na forma de talismãs, colares e outros objetos de adorno. Os artesãos indígenas criam essas peças com grande habilidade, muitas vezes incorporando técnicas que foram passadas de geração em geração. Cada peça é única, refletindo não apenas a habilidade do artista, mas também as histórias e crenças da cultura a que pertence.</textarea>
+                    </div>
+                    <div class="main_modal_botoes">
+                        <button class="main_modal_botoes_botao botao_descartar" id="btn-fechar-modal">Fechar</button>
+                        <button class="main_modal_botoes_botao botao_publicar" id="btn-editar-modal">Editar</button>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <div class="modal_carregando" id="carregando">
+        <div class="div_carrega">
+            <h2 class="main_cabecalho_titulo_modal" id="titulo-modal">Carregando...</h2>
+            <div id="carregando-barra"></div>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <h2 class="rodape_texto">Desenvolvido por Leonardo Pereira</h2>
+    </footer>
+    <script src="/js/main/main_elementares.js" type="module"></script>
+    <script src="/js/funcoes/carrega_previsualizacao_imagem.js" type="module"></script>
+</body>
+</html>

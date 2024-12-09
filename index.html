@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pindorama</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1 class="cabecalho_titulo">PINDORAMA</h1>
+      <p class="cabecalho_subtitulo">a terra das soluções adiadas</p>
+    </header>
+    <section class="menu">
+      <ul class="menu_lista">
+        <li class="menu_lista_item">
+          <a href="index.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto ativo">Criaturas</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="http://localhost:4173/tipos.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Tipos</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="https://localhost:4173/formas.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Formas</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="http://localhost:4173/origens.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Origens</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="http://localhost:4173/elementares.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Elementos</p>
+          </a>
+        </li>
+        <!-- <li class="menu_lista_item">
+                <a href="entrar.html" class="menu_lista_item_link">
+                    <p class="menu_lista_item_texto">Sair</p>
+                </a>                
+            </li> -->
+      </ul>
+    </section>
+    <main class="main">
+      <div class="main_cabecalho">
+        <h2 class="main_cabecalho_titulo">Criaturas</h2>
+        <a href="http://localhost:4173/nova_criatura.html" class="main_cabecalho_link">
+          <img
+            class="main_cabecalho_adicionar"
+            src="/assets/adicionar.png"
+            alt="Icone de Adicionar"
+            id="adicionar-criatura"
+          />
+        </a>
+        <img
+          class="main_cabecalho_adicionar_pesquisa"
+          id="main-pesquisa"
+          src="/assets/barra_pesquisa_azul.png"
+          alt="Imagem de mãos sob bola de cristal"
+        />
+      </div>
+      <div class="main_criaturas_pesquisa invisivel" id="criaturas-pesquisa">
+        <h3 class="main_criaturas_pesquisa_texto">Pesquisar por:</h3>
+        <select
+          class="main_criaturas_pesquisa_select"
+          id="pesquisa"
+          name="pesquisa"
+        >
+          <option value="tipo">Tipo</option>
+          <option value="forma">Forma</option>
+          <option value="origem">Origem</option>
+          <option value="etiqueta">Etiqueta</option>
+        </select>
+        <select
+          class="main_criaturas_pesquisa_select_conteudo"
+          id="pesquisa-conteudo"
+          name="pesquisa_conteudo"
+        ></select>
+        <input
+          class="main_criaturas_pesquisa_select_conteudo invisivel"
+          type="text"
+          id="pesquisa-etiqueta"
+        />
+        <img
+          class="main_criaturas_pesquisa_icone"
+          src="/assets/pesquisa.png"
+          alt="Imagem de Pesquisa"
+          id="fazer-pesquisa"
+        />
+      </div>
+      <ul class="main_lista" id="main-lista"></ul>
+    </main>
+    <div class="modal_carregando" id="carregando">
+      <div class="div_carrega">
+        <h2 class="main_cabecalho_titulo_modal" id="titulo-modal">
+          Carregando...
+        </h2>
+        <div id="carregando-barra"></div>
+      </div>
+    </div>
+
+    <footer class="rodape">
+      <h2 class="rodape_texto">Desenvolvido por Leonardo Pereira</h2>
+    </footer>
+    <script src="/js/main/main_index.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pindorama</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1 class="cabecalho_titulo">PINDORAMA</h1>
+      <p class="cabecalho_subtitulo">a terra das soluções adiadas</p>
+    </header>
+    <section class="menu">
+      <ul class="menu_lista">
+        <li class="menu_lista_item">
+          <a href="index.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto ativo">Criaturas</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="tipos.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Tipos</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="formas.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Formas</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="origens.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Origens</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="elementares.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Elementos</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="entrar.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Sair</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <main class="main">
+      <div class="main_cabecalho">
+        <h2 class="main_cabecalho_titulo" id="titulo-add-criatura">
+          Nova Criatura
+        </h2>
+      </div>
+      <div class="main_formulario">
+        <div class="main_formulario_foto">
+          <div class="main_formulario_foto_previ">
+            <img
+              class="main_formulario_foto_previ_img"
+              id="previ-img"
+              src="assets/sem_imagem.jpg"
+              alt="Imagem que representa a ausência de imagem"
+            />
+          </div>
+          <button class="main_formulario_foto_botao" id="foto-botao">
+            Carregar Foto
+          </button>
+          <input
+            type="file"
+            id="carregar-foto-campo"
+            accept="image/"
+            style="display: none"
+          />
+          <div class="main_formulario_foto_nome">
+            <p class="main_formulario_foto_nome_etiqueta">foto_perfil.png</p>
+            <img src="/assets/fechar.svg" alt="Imagem de Fechar Clara" />
+          </div>
+        </div>
+        <div class="main_formulario_formulario">
+          <form action="" class="formulario_criatura" id="form-nova-criatura">
+            <input type="hidden" id="criatura-id" />
+            <div class="formulario_criatura_div" id="nome">
+              <label class="formulario_criatura_label" for="nome"
+                >Nome da Criatura</label
+              >
+              <input
+                class="formulario_criatura_input"
+                type="text"
+                id="criatura-nome"
+                name="nome"
+              />
+            </div>
+            <div class="formulario_criatura_div" id="tipo">
+              <label class="formulario_criatura_label" for="tipo">Tipo</label>
+              <select
+                class="formulario_criatura_select"
+                id="criatura-tipo"
+                name="tipo"
+              ></select>
+            </div>
+            <div class="formulario_criatura_div" id="forma">
+              <label class="formulario_criatura_label" for="forma">Forma</label>
+              <select
+                class="formulario_criatura_select"
+                id="criatura-forma"
+                name="forma"
+              ></select>
+            </div>
+            <div class="formulario_criatura_div" id="origem">
+              <label class="formulario_criatura_label" for="origem"
+                >Origem</label
+              >
+              <select
+                class="formulario_criatura_select"
+                id="criatura-origem"
+                name="origem"
+              ></select>
+            </div>
+            <div class="formulario_criatura_div" id="modo">
+              <label class="formulario_criatura_label" for="modo">Modo</label>
+              <select
+                class="formulario_criatura_select"
+                id="criatura-modo"
+                name="modo"
+              >
+                <option value="permanente">Permanente</option>
+                <option value="periodico">Periódico</option>
+                <option value="temporario">Temporário</option>
+                <option value="metamorfico">Metamórfico</option>
+              </select>
+            </div>
+            <div class="formulario_criatura_div" id="descricao">
+              <label class="formulario_criatura_label" for="descricao"
+                >Descrição</label
+              >
+              <textarea
+                class="formulario_criatura_textarea"
+                name="descricao"
+                id="criatura-descricao"
+              ></textarea>
+            </div>
+            <div class="formulario_criatura_div_etiquetas" id="etiqueta">
+              <label class="formulario_criatura_label" for="etiqueta"
+                >Etiquetas</label
+              >
+              <input
+                class="formulario_criatura_input"
+                id="input-add-etiqueta"
+                type="text"
+                id="criatura-etiqueta"
+                name="etiqueta"
+              />
+              <ul
+                class="conteudo_campos_campo_lista_etiquetas_add"
+                id="lista-etiquetas"
+              ></ul>
+            </div>
+            <div class="main_formulario_botoes" id="criatura-botoes">
+              <button
+                class="main_formulario_botoes_botao botao_descartar"
+                type="reset"
+                id="botao-descartar"
+              >
+                Descartar
+              </button>
+              <button
+                class="main_formulario_botoes_botao botao_publicar"
+                type="submit"
+                id="botao-publicar"
+              >
+                Publicar
+              </button>
+            </div>
+          </form>
+          <button class="botao_apagar_criatura invisivel" id="botao-apagar">
+            Apagar
+          </button>
+        </div>
+      </div>
+    </main>
+    <div class="modal_carregando" id="carregando">
+      <div class="div_carrega">
+        <h2 class="main_cabecalho_titulo_modal" id="titulo-modal">
+          Carregando...
+        </h2>
+        <div id="carregando-barra"></div>
+      </div>
+    </div>
+
+    <footer class="rodape">
+      <h2 class="rodape_texto">Desenvolvido por Leonardo Pereira</h2>
+    </footer>
+    <script src="/js/main/main_nova_criatura.js" type="module"></script>
+    <script
+      src="/js/funcoes/carrega_previsualizacao_imagem.js"
+      type="module"
+    ></script>
+  </body>
+</html>
