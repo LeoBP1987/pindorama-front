@@ -8,14 +8,14 @@ const selectPesquisa = document.getElementById("pesquisa");
 const selectConteudoPesquisa = document.getElementById("pesquisa-conteudo");
 const inputEtiquetaPesquisa = document.getElementById("pesquisa-etiqueta");
 const linkPesquisa = document.getElementById("fazer-pesquisa");
-const modalSobre = document.getElementById('modal-sobre')
+const modalSobre = document.getElementById("modal-sobre");
 
 document.addEventListener("DOMContentLoaded", async () => {
   await reinderizaCriaturasMain();
 
-  const apresenta = localStorage.getItem('apresenta')
+  const apresenta = localStorage.getItem("apresenta");
 
-  if(!apresenta){
+  if (!apresenta) {
     chamaApresentacao();
   }
 
@@ -143,11 +143,11 @@ async function pesquisarCriaturas() {
 }
 
 function chamaApresentacao() {
-  const modalSobre = document.getElementById('modal-sobre')
+  const modalSobre = document.getElementById("modal-sobre");
 
-  modalSobre.style.display = 'flex'
+  modalSobre.style.display = "flex";
 
-  localStorage.setItem('apresenta', true)
+  localStorage.setItem("apresenta", true);
 
   fechaModalSobre();
 }
@@ -159,9 +159,11 @@ function fechaModalSobre() {
     }
   });
 
-  document.getElementById('botao-fechar-modal-sobre').addEventListener("click", () => {
-    modalSobre.style.display = "none";
-  });
+  document
+    .getElementById("botao-fechar-modal-sobre")
+    .addEventListener("click", () => {
+      modalSobre.style.display = "none";
+    });
 
   document.addEventListener("keydown", (evento) => {
     if (evento.keyCode === 27) {
