@@ -66,7 +66,7 @@ function alterarParaNovoElemento() {
 
 function limpaFormulario() {
   formularioElementos.reset();
-  imgFormElementos.src = "assets/sem_imagem.jpg";
+  imgFormElementos.src = "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/sem_imagem.jpg";
   imgFormElementos.alt = "Imagem que representa a ausência de imagem";
   prevNome.textContent = "foto_perfil.png";
 
@@ -125,7 +125,7 @@ async function preencherEdicao() {
   inputId.value = elemento.id;
   imgFormElementos.src = elemento.foto_elemento
     ? elemento.foto_elemento
-    : "/assets/criatura_sem_imagem.jpg";
+    : "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/sem_imagem.jpg.jpg";
   imgFormElementos.alt = `Imagem do elemento ${elemento.elemento}`;
   prevNome.textContent = elemento.foto_elemento.name;
   inputNome.value = elemento.elemento;

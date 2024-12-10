@@ -497,7 +497,7 @@ const ui = {
 
           const imgFoto = document.createElement("img");
           imgFoto.classList.add("main_criatura_foto_img_album");
-          imgFoto.src = "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/sem_imagem.jpg";
+          imgFoto.src = "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/criatura_sem_imagem.jpg";
           imgFoto.alt = "Imagem que indica falta de fotos no Album";
 
           divFoto.appendChild(imgFoto);

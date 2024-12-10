@@ -124,7 +124,7 @@ function ativaModoAdicionarFoto() {
 function limparFormularioNovaFoto() {
   inputFoto.value = "";
   inputFonte.value = "";
-  imgPrevi.src = "assets/sem_imagem.jpg";
+  imgPrevi.src = "https://pindorama-s3.s3.sa-east-1.amazonaws.com/static/assets/sem_imagem.jpg";
   imgPrevi.alt = "Imagem que representa a ausência de imagem";
   nomePrevi.textContent = "foto_perfil.png";
 }

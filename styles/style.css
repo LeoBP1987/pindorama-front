@@ -984,6 +984,51 @@ body {
     width: 0%;
     height: 30px; 
     background-color: #B22222;
+    box-shadow: 0 2px 10px rgba(75, 0, 130, 0.8);
     border-radius: 16px;
+}
+
+.modal_exibe_div_sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 15% auto;
+    padding: 20px;
+    border: 2px solid #4B0082;
+    width: 80%;
+    max-height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 10px rgba(75, 0, 130, 0.85);
+    border-radius: 20px;
+    overflow-y: auto;
+}
+
+.sobre-div-img {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.sobre-modal-paragrafos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.paragrafo_sobre_modal {
+    font-family: 'RootBeer', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.5;
+    text-indent: 25px;
+}
+
+.img-sobre-modal {
+    width: 75px;
 }
 
